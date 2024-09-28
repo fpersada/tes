@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Virtual AI Tour Guide</title>
+    <!-- Menambahkan A-Frame untuk menangani objek 3D -->
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <h1>Pemandu AI Virtual</h1>
+    <!-- Scene A-Frame tempat avatar akan ditampilkan -->
+    <a-scene>
+      <!-- Menggunakan model 3D avatar (.glb) yang telah Anda buat -->
+      <a-assets>
+        <a-asset-item id="avatarModel" src="path_to_your_avatar.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Menempatkan avatar pada posisi tertentu di dunia virtual -->
+      <a-entity gltf-model="#avatarModel" position="0 1.6 -3" scale="1 1 1"></a-entity>
+
+      <!-- Lampu agar avatar terlihat lebih baik -->
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" intensity="0.5" position="-1 1 1"></a-light>
+
+      <!-- Tambahkan latar belakang atau lingkungan virtual sesuai keinginan -->
+      <a-sky color="#ECECEC"></a-sky>
+    </a-scene>
+  </body>
+</html>
